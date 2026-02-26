@@ -1,66 +1,82 @@
-## Foundry
+# 📘 FundMe Smart Contract
+<br>
 
-**Foundry is a blazing fast, portable and modular toolkit for Ethereum application development written in Rust.**
+## 📖 Overview
+**FundMe** is a decentralized crowdfunding smart contract built with **Solidity** and the **Foundry** framework.  
+It allows users to fund a project with ETH while enforcing a minimum USD value using **Chainlink Price Feeds**.  
+Only the contract owner can withdraw the funds.
 
-Foundry consists of:
+This project demonstrates secure smart contract development, testing, deployment, and CI integration.
 
-- **Forge**: Ethereum testing framework (like Truffle, Hardhat and DappTools).
-- **Cast**: Swiss army knife for interacting with EVM smart contracts, sending transactions and getting chain data.
-- **Anvil**: Local Ethereum node, akin to Ganache, Hardhat Network.
-- **Chisel**: Fast, utilitarian, and verbose solidity REPL.
+---
 
-## Documentation
+<br><br>
 
-https://book.getfoundry.sh/
+## ✨ Features
 
-## Usage
+- 💰 Accept ETH funding from multiple users  
+- 📉 Minimum funding requirement in USD  
+- 🔗 Real-time ETH/USD conversion using Chainlink Price Feeds  
+- 🔐 Owner-only withdrawal function  
+- 🧪 Comprehensive unit tests with Foundry  
 
-### Build
+---
 
-```shell
-$ forge build
+<br><br>
+
+## 💻REQUIREMENTS
+    git
+    foundry(solidity framework)
+---
+<br><br>
+
+
+## ⚙️ Installation & Setup
+
+### 1️⃣ *Clone the Repository*
+
+```bash
+git clone https://github.com/LuizToren120/Foundry_FundMe.git
+cd Foundry_FundMe
 ```
 
-### Test
+<br>
 
-```shell
-$ forge test
+### 2️⃣ *Install Dependencies*
+```bash
+forge install
 ```
 
-### Format
+>! NOTE
+It installs two dependencies needed from the foundry.toml, needed in testing and pricefeeds(from ChainLin)
 
-```shell
-$ forge fmt
+    
+#### Can be installed individually:
+```bash
+forge install foundry-rs/forge-std 
+forge install smartcontractkit/chainlink-brownie-contracts
 ```
+---
+<br><br>
 
-### Gas Snapshots
 
-```shell
-$ forge snapshot
+## ▶️ Usage
+Run at the root directory 
+
+Deploy contract:
+```bash
+forge fmt
+forge build
+forge test -vv
+make deploy
 ```
+<br>
 
-### Anvil
+## Recommendation
+Check the Makefile for more bash commands
 
-```shell
-$ anvil
-```
+---
+<br><br><br>
 
-### Deploy
+# THANK YOU
 
-```shell
-$ forge script script/Counter.s.sol:CounterScript --rpc-url <your_rpc_url> --private-key <your_private_key>
-```
-
-### Cast
-
-```shell
-$ cast <subcommand>
-```
-
-### Help
-
-```shell
-$ forge --help
-$ anvil --help
-$ cast --help
-```
