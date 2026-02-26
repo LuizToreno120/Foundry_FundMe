@@ -25,8 +25,8 @@ This project demonstrates secure smart contract development, testing, deployment
 <br><br>
 
 ## 💻REQUIREMENTS
-    git
-    foundry(solidity framework)
+- git
+- foundry(solidity framework)
 ---
 <br><br>
 
